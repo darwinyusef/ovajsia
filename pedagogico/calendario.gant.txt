@@ -1,0 +1,25 @@
+gantt
+    title Cronograma del proyecto
+    dateFormat  HH:mm
+    axisFormat %H:%M
+
+    section Contextualización Técnica
+    Contextualización Técnica       :active, 08:00, 1h
+
+    section Diagnóstico Inicial
+    Diagnóstico Inicial             :active, 09:00, 1h
+
+    section División por Grupos
+    División por Grupos             :active, 10:00, 1h
+
+    section Actividad 1: Exploración del Proyecto
+    Actividad 1: Exploración del Proyecto :active, 11:00, 1h
+
+    section Actividad 2: Exploración del DOM
+    Actividad 2: Exploración del DOM     :active, 12:00, 1h
+
+    section Actividad 3: Desarrollo de Aplicación
+    Actividad 3: Desarrollo de Aplicación :active, 13:00, 2h
+
+    section Actividad 4: Presentación de Resultados
+    Actividad 4: Presentación de Resultados :active, 15:00, 1h

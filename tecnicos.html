@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&family=Heebo&family=Shadows+Into+Light&display=swap"
+		rel="stylesheet" />
+
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/swiper.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+		type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<!-- Nutrition Demo Specific Stylesheet -->
+	<link rel="stylesheet" href="demos/nutrition.css" type="text/css" />
+	<!-- Nutrition Custom Css -->
+	<link rel="stylesheet" href="demos/css/fonts.css" type="text/css" />
+	<!-- Nutrition Custom Fonts -->
+	<!-- / -->
+
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" href="css/colors.php?color=080E2C" type="text/css" />
+
+	<link rel="stylesheet" href="./ejercicioIA/precode.css">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Sena | Javascript </title>
+	<style>
+		#header {
+			margin-top: -20px !important;
+		}
+
+		#logo {
+			padding: 10px;
+		}
+
+		li {
+			background: transparent !important;
+			border: 0px !important;
+		}
+
+		.fw-normal {
+			font-size: 20px !important;
+		}
+
+		.img-center {
+			width: 30%;
+			border-radius: 30px;
+			filter: saturate(0.6);
+			transition: filter 1s ease-in-out;
+		}
+
+		.img-center:hover {
+			filter: saturate(1);
+		}
+
+		.img-responsive {
+			border: 0px;
+			border-radius: 20px;
+		}
+
+		.center {
+			display: flex;
+			align-items: center;
+		}
+
+
+		.fixed-center {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 0px;
+		}
+
+		.colum {
+			flex-direction: column;
+			gap: 30px;
+			margin-bottom: 30px;
+		}
+
+
+		.botones {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.boton {
+			background-color: #4caf50;
+			color: #fff;
+			padding: 20px;
+			border: none;
+			border-radius: 10px;
+			cursor: pointer;
+			margin: 10px;
+			width: 200px;
+			text-align: center;
+			text-decoration: none;
+		}
+
+		.boton:hover {
+			background-color: #3e8e41;
+		}
+
+		.contenido-boton {
+			padding: 10px;
+		}
+
+		.icono-boton {
+			font-size: 24px;
+			margin-top: 10px;
+		}
+
+		.boton-1 {
+			background-color: #03a9f4;
+		}
+
+		.boton-2 {
+			background-color: #ff9800;
+		}
+
+		.boton-3 {
+			background-color: #e91e63;
+		}
+
+		.pos-x-end {
+			top: 0px;
+		}
+
+		#slider {
+			padding-top: 80px;
+		}
+
+		.element {
+			font-size: 80px;
+			line-height: 10px;
+		}
+
+		.row2 {
+			gap: 10px;
+		}
+
+		.bloque {
+			padding: 15px;
+			border: 0.5px solid rgb(61, 21, 21);
+			background-color: #ffffff;
+			margin-bottom: 20px;
+			text-align: center;
+			margin-bottom: 20px;
+			color: #333;
+			border-radius: 10px;
+			transition: all 0.3s ease;
+			flex: 0 0 auto;
+			width: 24%;
+
+		}
+
+		.bloqueMod {
+			width: 32%;
+			background-color: white;
+			border: 0px;
+		}
+
+		.bloque:hover {
+			border: 2px solid #ccc;
+			background-color: #f9f9f9;
+		}
+
+		.cabecera-bloque {
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		.cabecera-bloque img {
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			width: 120px !important;
+		}
+
+		.nuevo-bloque img {
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			width: 220px !important;
+		}
+
+		.list-group li {
+			list-style: none !important;
+		}
+
+		.list-group img {
+			width: 300px;
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
+
+		.full-img {
+			width: 100% !important;
+		}
+
+		.menu-link {
+			display: block !important;
+			line-height: 22px !important;
+			padding: 14px 5px !important;
+			color: #444 !important;
+			font-weight: 700 !important;
+			letter-spacing: 1px !important;
+			font-size: 0.8125rem !important;
+			text-transform: uppercase !important;
+			font-family: 'Poppins', sans-serif !important;
+			margin-right: 20px !important;
+		}
+	</style>
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="border-bottom-0">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo" class="me-lg-5">
+							<a href="index.html" class="standard-logo"><img src="./img/logo-sena.svg"
+									alt="Canvas Logo"></a>
+							<a href="index.html" class="retina-logo"><img src="./img/logo-sena.svg"
+									alt="Canvas Logo"></a>
+						</div><!-- #logo end -->
+
+
+
+						<div id="primary-menu-trigger" class="ms-3">
+							<svg class="svg-trigger" viewBox="0 0 100 100">
+								<path
+									d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20">
+								</path>
+								<path d="m 30,50 h 40"></path>
+								<path
+									d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20">
+								</path>
+							</svg>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu me-lg-auto">
+
+							<ul class="menu-container">
+								<li class="menu-item current"><a class="menu-link" href="./introduccion.html">
+										<div>Introducción</div>
+									</a></li>
+								<li class="menu-item"><a class="menu-link" href="./conceptos.html">
+										<div>Conceptos IA</div>
+									</a></li>
+								<li class="menu-item"><a class="menu-link" href="./tecnicos.html">
+										<div>Definición de la Problematica</div>
+									</a></li>
+								<li class="menu-item"><a class="menu-link" href="./evaluacion.html">
+										<div>Actividad Evaluativa</div>
+									</a></li>
+								<li class="menu-item"><a class="menu-link" href="./downloads/guia.pdf">
+										<div>Guia de aprendizaje</div>
+									</a></li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+
+
+						<form class="top-search-form" action="search.html" method="get">
+							<input type="text" name="q" class="form-control" value=""
+								placeholder="Type &amp; Hit Enter.." autocomplete="off">
+						</form>
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Hero
+		============================================= -->
+		<section id="slider" class="slider-element">
+			<div class="container py-lg-0">
+				<div
+					class="row min-vh-lg-100 align-items-center justify-content-md-between justify-content-center col-mb-50">
+					<div class="col-xl-12 col-md-12">
+						<div class="container">
+							<div class="list-group-item" style="border: 0px">
+								<h1>1. Que se requiere para trabajar con Javascript </h1>
+
+								<div class="list-group-item fixed-center">
+									<img class="img-center" src="./img/02.jpeg" alt="chica con laptop">
+								</div>
+
+								<br>
+								<h2>Estos son los conceptos más importantes antes de trabajar con la actividad principal
+								</h2>
+								<ul class="list-group list-group-flush">
+									<li><strong>Eventos DOM:</strong> Los eventos DOM (Document Object Model) son
+										acciones que
+										ocurren en un documento HTML, como clics, cambios de texto, carga de páginas,
+										etc.</li>
+									<li><strong>Fetch API</strong>: Fetch API es una interfaz de programación para
+										realizar
+										solicitudes HTTP en navegadores web.</li>
+									<li><strong>Entrenamiento en IA</strong>: El entrenamiento en IA se refiere al
+										proceso de
+										enseñar a un modelo de inteligencia artificial a realizar tareas específicas.
+									</li>
+									<li><strong>JSON</strong>: es un formato de datos que se utiliza para intercambiar
+										información entre servidores y clientes muy usado en js para integración entre
+										una API.
+									</li>
+								</ul>
+								<br>
+								<p>Puedes verlos a continuación con mucho más detalle</p>
+
+								<div class="row row2">
+									<div class="col-md-3 bloque">
+										<div class="cabecera-bloque">
+											<img src="img/05.jpeg" alt="Eventos DOM" width="50">
+										</div>
+										<button class="btn btn-primary btn-md" data-toggle="tooltip" title="Registro"
+											data-bs-toggle="modal" data-bs-target="#exampleModalDOM">
+											Eventos del DOM
+										</button>
+										<a href="./ejercicioIA/eventos.html" target="_blank"
+											class="btn btn-primary btn-md" data-toggle="tooltip" title="Registro">
+											<i class="fas fa-file"></i>
+										</a>
+
+									</div>
+
+									<div class="col-md-3 bloque">
+										<div class="cabecera-bloque">
+											<img src="img/06.jpeg" alt="Fetch API" width="50">
+										</div>
+										<button class="btn btn-success btn-md" data-toggle="tooltip" title="Campo"
+											data-bs-toggle="modal" data-bs-target="#exampleModalFetch">
+											<i class="fas fa-column"></i> Fetch API
+										</button>
+										<a href="./ejercicioIA/documentacion1.html" target="_blank"
+											class="btn btn-success btn-md" data-toggle="tooltip" title="Campo">
+											<i class="fas fa-file"></i>
+										</a>
+										<a href="./ejercicioIA/documentacion2.html" target="_blank"
+											class="btn btn-success btn-md" data-toggle="tooltip" title="Campo">
+											<i class="fas fa-address-book"></i>
+										</a>
+									</div>
+
+									<div class="col-md-3 bloque">
+										<div class="cabecera-bloque">
+											<img src="img/07.jpeg" alt="Entrenamiento de IA" width="50">
+										</div>
+										<button class="btn btn-warning btn-md" data-toggle="tooltip" title="Tabla"
+											data-bs-toggle="modal" data-bs-target="#exampleModalIA">
+											Entrenamiento
+										</button>
+									</div>
+
+									<div class="col-md-3 bloque">
+										<div class="cabecera-bloque">
+											<img src="img/08.jpeg" alt="Salida en JSON" width="50">
+										</div>
+										<button class="btn btn-danger btn-md" data-toggle="tooltip"
+											data-bs-toggle="modal" data-bs-target="#exampleModalJSON"
+											title="Base de Datos">
+											Salida en JSON
+										</button>
+										<a href="https://pokeapi.co/api/v2/pokemon/ditto" target="_blank"
+											class="btn btn-danger btn-md" data-toggle="tooltip" title="Base de Datos">
+											<i class="fas fa-database"></i>
+										</a>
+									</div>
+								</div>
+
+							</div>
+
+
+
+							<br>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container py-lg-0">
+				<div>
+					<h1>2. Como se piensa desarrollar el Entrenamiento </h1>
+					<p class="fw-normal">La integración con la API de OpenAI es una herramienta poderosa para
+						desarrollar aplicaciones
+						innovadoras que mejoran la interacción con los usuarios y facilitan la comunicación. Para
+						trabajar con esta API, es importante entender tres conceptos clave: generación de texto,
+						clasificación de texto y traducción de texto.</p>
+					<div class="row" style="gap: 10px;">
+						<div class="col-md-4 bloque bloqueMod">
+							<div class="cabecera-bloque nuevo-bloque">
+								<img src="img/09.jpeg" alt="Generación de Texto" width="100">
+							</div>
+							<h2>Introducción</h2>
+							<p>El contacto con la IA a través de texto es la capacidad de crear texto coherente y
+								relevante en
+								respuesta a una entrada o prompt. La API de OpenAI utiliza modelos de lenguaje
+								avanzados para generar texto que se ajusta a las necesidades específicas de la
+								aplicación, todo basado en el objetivo de la misma y de como se desea que la IA nos
+								hable (Ejm de forma cariñosa). </p>
+						</div>
+
+						<div class="col-md-4 bloque bloqueMod">
+							<div class="cabecera-bloque nuevo-bloque">
+								<img src="img/10.jpeg" alt="Clasificación de Texto" width="100">
+							</div>
+							<h2>Procesamiento de Texto</h2>
+							<p>La clasificación de texto es el proceso de asignar categorías o etiquetas a
+								trozos de texto en función de su contenido. La API de OpenAI utiliza algoritmos
+								de aprendizaje automático para clasificar texto en categorías como spam/no spam,
+								positivo/negativo, etc. Esto es útil para aplicaciones que requieren análisis de
+								sentimiento, detección de spam o clasificación de contenido.</p>
+						</div>
+
+						<div class="col-md-4 bloque bloqueMod">
+							<div class="cabecera-bloque nuevo-bloque">
+								<img src="img/11.jpeg" alt="Traducción de Texto" width="100">
+							</div>
+							<h2>Entrenamiento</h2>
+							<p>Describes la temática y objetivo, luego envías datos para procesamiento al prompt. La API
+								procesa la información y genera una salida personalizada. Puedes recibir la respuesta en
+								formato texto normal o JSON, dependiendo de tus necesidades. De esta manera, entiendes y
+								ajustas el modelo para mejorar la precisión. Por ultimo es recomendable hacer una base
+								critica del proceso de aprendizaje
+								generando respuestas contrarias al entrenamiento y haciendo las minimas modificaciones
+							</p>
+						</div>
+					</div>
+					<p class="fw-normal"> La generación de texto crea contenido coherente en respuesta a una entrada,
+						ideal para
+						resúmenes, contenido para redes sociales y correos electrónicos personalizados, así como para
+						crear chatbots y asistentes virtuales. La clasificación de texto asigna categorías a trozos de
+						texto para análisis de sentimiento y detección de spam, mientras que la traducción de texto
+						convierte texto de un idioma a otro en tiempo real.</p>
+
+					<h2>Basado en los contenidos que aqui se explican vamos a desarrollar una
+						aplicación de preguntas de ciencia y de medio ambiente vamos a probarla:
+					</h2>
+
+					<div class="fixed-center colum" id="slider">
+						<div class="fixed-center row2">
+							<a href="./ejercicioIA/index.html" class="btn btn-success btn-lg" style="width: 400px;">
+								Ingresa a la actividad</a>
+							<a href="./downloads/ejercicioIA.zip" class="btn btn-primary btn-lg" style="width: 400px;">
+								Descargue el zip con el codigo</a>
+						</div>
+						<div class="row ">
+							<div class="col-md-6 center">
+								<img src="img/actividad.JPG" style="margin:0 auto; width: 70%;" alt="">
+							</div>
+							<div class="col-md-6 center colum">
+								<h2>¿Como realizaremos la actividad?</h2>
+								<p>En este video, explicaremos el proceso de desarrollo de un proyecto de traducción
+									utilizando JavaScript y OpenAI. Cubriremos los 4 momentos clave: contextualización,
+									desarrollo grupal, resolución del problema y presentación. También introduciremos el
+									Plan de Mejoramiento para asegurar el éxito en el proyecto. ¡Únete para aprender y
+									mejorar tus habilidades!</h3>
+									<iframe width="100%" height="365"
+										src="https://www.youtube.com/embed/W4ZXziA-S3c?si=HRu-Hr3C6Iy4BNPK"
+										title="YouTube video player" frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+
+
+
+
+
+
+		<!-- Modal Eventos DOM -->
+		<div class="modal fade" id="exampleModalDOM" tabindex="-1" aria-labelledby="exampleModalDOMLabel"
+			aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title">Eventos DOM</h3>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body" style="padding: 2rem">
+						<ul class="list-group list-group-flush">
+							<img src="img/05.jpeg" alt="Eventos DOM" width="50">
+							<li><strong>Eventos DOM:</strong> Los eventos DOM (Document Object Model) son acciones que
+								ocurren en un documento HTML, como clics, cambios de texto, carga de páginas, etc. Estos
+								eventos permiten a los desarrolladores ejecutar código JavaScript en respuesta a
+								acciones del usuario o cambios en la página. Por ejemplo, cuando un usuario hace clic en
+								un botón, se puede ejecutar una función que realice una acción específica. Los eventos
+								DOM son fundamentales para crear interacciones dinámicas en aplicaciones web, ya que
+								permiten responder a las acciones del usuario y actualizar la interfaz de manera
+								efectiva.</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+							Salir
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal Fetch API -->
+		<div class="modal fade" id="exampleModalFetch" tabindex="-1" aria-labelledby="exampleModalFetchLabel"
+			aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title">Fetch API</h3>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body" style="padding: 2rem">
+						<ul class="list-group list-group-flush">
+							<img src="img/06.jpeg" alt="Fetch API" width="50">
+							<li><strong>Fetch API</strong>: Fetch API es una interfaz de programación para realizar
+								solicitudes HTTP en navegadores web. Permite enviar y recibir datos de un servidor de
+								manera asíncrona, lo que mejora la experiencia del usuario al no bloquear la interfaz.
+								La Fetch API reemplaza la antigua API XMLHttpRequest y ofrece una sintaxis más simple y
+								elegante. Por ejemplo, se puede utilizar para obtener datos de un servidor con la
+								siguiente sintaxis: fetch('(link unavailable)').then(respuesta =>
+								respuesta.json()).then(datos => console.log(datos)). Esto permite a los desarrolladores
+								crear aplicaciones web más dinámicas y conectadas.</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+							Salir
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal Entrenamiento en IA -->
+		<div class="modal fade" id="exampleModalIA" tabindex="-1" aria-labelledby="exampleModalIALabel"
+			aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title">Entrenamiento en IA</h3>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body" style="padding: 2rem">
+						<ul class="list-group list-group-flush">
+							<img src="img/07.jpeg" alt="Entrenamiento de IA" width="50">
+							<li><strong>Entrenamiento en IA</strong>: El entrenamiento en IA se refiere al proceso de
+								enseñar a un modelo de inteligencia artificial a realizar tareas específicas. Esto
+								involucra recopilar y preprocesar datos, seleccionar el algoritmo de aprendizaje
+								adecuado, entrenar el modelo y evaluar su desempeño. El entrenamiento efectivo es
+								crucial para desarrollar modelos de IA precisos y eficaces que puedan resolver problemas
+								complejos. El entrenamiento en IA requiere una comprensión profunda de las técnicas de
+								aprendizaje automático y la capacidad de ajustar los parámetros del modelo para
+								optimizar su desempeño.</li>
+							<a href="./img/entrenamiento.JPG" target="_blank"><img src="./img/entrenamiento.JPG"
+									class="full-img" alt=""></a>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+							Salir
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Modal JSON -->
+		<div class="modal fade" id="exampleModalJSON" tabindex="-1" aria-labelledby="exampleModalJSONLabel"
+			aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title">JSON</h3>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body" style="padding: 2rem">
+						<ul class="list-group list-group-flush">
+							<img src="img/08.jpeg" alt="Salida en JSON" width="50">
+							<li><strong>JSON</strong>: es un formato de datos que se utiliza para intercambiar
+								información entre servidores y clientes muy usado en js para integración entre una API.
+							</li>
+						</ul>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+							Salir
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="bg-white border-0">
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap">
+
+					<div class="row justify-content-between">
+						<div class="col-lg-2 mb-5 mb-lg-0">
+							<div class="widget clearfix">
+
+								<img src="./img/logo-sena.svg" style="width: 100px;  margin-bottom: 10px;" alt="">
+								<p class="mb-4 op-07">El Sena nos brinda Formación profesional integral.</p>
+							</div>
+						</div>
+						<div class="col-lg-8 d-flex justify-content-end">
+
+							<div class="row w-100">
+								<div class="col-lg-4 col-6">
+									<ul class="widget_links widget-li-noicon">
+										<li class="mb-2 fw-medium"><a href="./introduccion.html">
+												<div>Introducción</div>
+											</a></li>
+										<li class="mb-2 fw-medium"><a href="./conceptos.html">
+												<div>Conceptos</div>
+											</a></li>
+										<li class="mb-2 fw-medium"><a href="./actividad.html">
+												<div>Definición de la Problematica</div>
+											</a></li>
+										<li class="mb-2 fw-medium"><a href="./evaluacion.html">
+												<div>Evaluación</div>
+											</a></li>
+									</ul>
+								</div>
+
+								<div class="col-lg-4 col-6">
+									<div class="col-lg-auto tarjeta naranja p-0 d-flex justify-content-center">
+										<a href="./introduccion.html" target="_blank"
+											class="boton-footer py-4 px-5 button-jittery">
+											<div class="contenido__footer__item">
+												<div class="contenido__footer__item__img me-3"><img
+														src="https://ecored-sena.github.io/ECORED-BASE-INFO-2021/assets/ico-descarga.svg"
+														style="width: 62px">
+												</div>
+												<div class="contenido__footer__item__text">
+													<h4 class="mb-1">Guia de </h4><span>Aprendizaje</span>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+
+								<div class="col-lg-4 col-6">
+									<div class="col-lg-auto tarjeta naranja p-0 d-flex justify-content-center">
+										<a href="./introduccion.html" target="_blank"
+											class="boton-footer py-4 px-5 button-jittery">
+											<div class="contenido__footer__item">
+												<div class="contenido__footer__item__img me-3"><img
+														src="./img/youtube.svg" style="width: 62px">
+												</div>
+												<div class="contenido__footer__item__text">
+													<h4 class="mb-1">Ver la </h4> <span>Explicación</span>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights" class="bg-white">
+				<div class="container">
+
+					<div class="row justify-content-between">
+
+						<div class="col">
+							<span class="text-black-50">&copy; SENA 2024 Todos los derechos reservados.</span>
+						</div>
+
+
+					</div>
+
+				</div>
+			</div><!-- #copyrights end -->
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-line-chevrons-up"></div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+	<script src="demos/js/plugins.js"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="demos/js/functions.js"></script>
+
+</body>
+
+</html>

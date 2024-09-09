@@ -1,0 +1,52 @@
+@startuml
+skinparam backgroundColor #F2F2F2
+skinparam sequenceParticipantBorderColor #666
+skinparam sequenceParticipantBackgroundColor #FFFFFF
+skinparam sequenceArrowColor #666
+
+
+participant "Docente" as D
+participant "Estudiantes" as E
+participant "Proyecto" as P
+
+
+== Contextualización Técnica ==
+D->E: Presentación del proceso
+E->D: Recepción de requerimientos
+
+
+== Diagnóstico Inicial ==
+D->E: Aplicación de diagnóstico inicial
+E->D: Retroalimentación sobre proyectos anteriores
+
+
+== División por Grupos ==
+D->E: Asignación de roles
+note right: Vigia del Tiempo (Lider), Implementador de JS, Entrenador de la IA
+
+
+== Actividad 1: Exploración del Proyecto ==
+E->P: Exploración del proyecto
+E->E: Evaluación de problemática
+note right: Entrada de texto, procesamiento API OpenAI, presentación resultados frontend
+
+
+== Actividad 2: Exploración del DOM ==
+E->P: Análisis estructura DOM
+E->E: Estudio interacción respuesta ChatGPT
+
+
+== Actividad 3: Desarrollo de Aplicación ==
+E->P: Descarga plantilla código
+E->E: Planteamiento problema y solución
+E->P: Modificación código y creación funcionalidades
+E->E: Prueba y depuración aplicación
+
+
+== Actividad 4: Presentación de Resultados ==
+E->D: Presentación aplicación y decisiones tomadas
+D->E: Retroalimentación constructiva
+note right: Autoevaluación y evaluación en equipo
+
+
+@enduml

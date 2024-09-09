@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="SemiColonWeb" />
+
+	<!-- Stylesheets
+	============================================= -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600;700&family=Heebo&family=Shadows+Into+Light&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="css/swiper.css" type="text/css" />
+
+	<link rel="stylesheet" href="css/dark.css" type="text/css" />
+	<link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+
+	<!-- Nutrition Demo Specific Stylesheet -->
+	<link rel="stylesheet" href="demos/nutrition/nutrition.css" type="text/css" /> <!-- Nutrition Custom Css -->
+	<link rel="stylesheet" href="demos/nutrition/css/fonts.css" type="text/css" /> <!-- Nutrition Custom Fonts -->
+	<!-- / -->
+
+	<link rel="stylesheet" href="css/custom.css" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" href="css/colors.php?color=080E2C" type="text/css" />
+
+	<!-- Document Title
+	============================================= -->
+	<title>Sena | Javascript </title>
+	<style>
+		#logo {
+			padding: 10px;
+		}
+
+		li {
+			background: transparent !important;
+			border: 0px !important;
+		}
+
+		.fw-normal {
+			font-size: 20px !important;
+		}
+
+		pre {
+			background-color: #333;
+			padding: 10px;
+			border: 1px solid black;
+			border-radius: 5px;
+		}
+
+		.codigo-sql {
+			background-color: #f0f0f0;
+			padding: 10px;
+			border: 1px solid #ddd;
+			border-radius: 5px;
+			font-size: 16px;
+			font-family: monospace;
+			text-align: center;
+		}
+
+		.palabra-clave {
+			color: #008000;
+			/* verde */
+			font-weight: bold;
+		}
+
+		.nombre-campo {
+			color: #0000FF;
+			/* azul */
+		}
+
+		.tipo-dato {
+			color: #808080;
+			/* gris */
+		}
+
+		.modificador {
+			color: #008000;
+			/* verde */
+			font-style: italic;
+		}
+	</style>
+
+	<style>
+		#header {
+			margin-top: -20px !important;
+		}
+
+		#logo {
+			padding: 10px;
+		}
+
+		li {
+			background: transparent !important;
+			border: 0px !important;
+		}
+
+		.fw-normal {
+			font-size: 20px !important;
+		}
+
+		.img-center {
+			width: 30%;
+			border-radius: 30px;
+			filter: saturate(0.6);
+			transition: filter 1s ease-in-out;
+		}
+
+		.img-center:hover {
+			filter: saturate(1);
+		}
+
+		.img-responsive {
+			border: 0px;
+			border-radius: 20px;
+		}
+
+		.center {
+			display: flex;
+			align-items: center;
+		}
+
+
+		.fixed-center {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border: 0px;
+		}
+
+		.colum {
+			flex-direction: column;
+			gap: 30px;
+			margin-bottom: 30px;
+		}
+
+
+		.botones {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.boton {
+			background-color: #4caf50;
+			color: #fff;
+			padding: 20px;
+			border: none;
+			border-radius: 10px;
+			cursor: pointer;
+			margin: 10px;
+			width: 200px;
+			text-align: center;
+			text-decoration: none;
+		}
+
+		.boton:hover {
+			background-color: #3e8e41;
+		}
+
+		.contenido-boton {
+			padding: 10px;
+		}
+
+		.icono-boton {
+			font-size: 24px;
+			margin-top: 10px;
+		}
+
+		.boton-1 {
+			background-color: #03a9f4;
+		}
+
+		.boton-2 {
+			background-color: #ff9800;
+		}
+
+		.boton-3 {
+			background-color: #e91e63;
+		}
+
+		.pos-x-end {
+			top: 0px;
+		}
+
+		#slider {
+			padding-top: 80px;
+		}
+
+		.element {
+			font-size: 80px;
+			line-height: 10px;
+		}
+
+		.row2 {
+			gap: 10px;
+		}
+
+		.bloque {
+			padding: 15px;
+			border: 0.5px solid rgb(61, 21, 21);
+			background-color: #ffffff;
+			margin-bottom: 20px;
+			text-align: center;
+			margin-bottom: 20px;
+			color: #333;
+			border-radius: 10px;
+			transition: all 0.3s ease;
+			flex: 0 0 auto;
+			width: 24%;
+
+		}
+
+		.bloqueMod {
+			width: 48%;
+			background-color: white;
+			border: 0px;
+		}
+
+		.bloque:hover {
+			border: 2px solid #ccc;
+			background-color: #f9f9f9;
+		}
+
+		.cabecera-bloque {
+			text-align: center;
+			margin-bottom: 10px;
+		}
+
+		.cabecera-bloque img {
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			width: 120px !important;
+		}
+
+		.nuevo-bloque img {
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			width: 500px !important;
+		}
+
+		.list-group li {
+			list-style: none !important;
+		}
+
+		.list-group img {
+			width: 600px;
+			margin: 0 auto;
+			margin-bottom: 20px;
+		}
+
+		.full-img {
+			width: 100% !important;
+		}
+
+		.menu-link {
+			display: block !important;
+			line-height: 22px !important;
+			padding: 14px 5px !important;
+			color: #444 !important;
+			font-weight: 700 !important;
+			letter-spacing: 1px !important;
+			font-size: 0.8125rem !important;
+			text-transform: uppercase !important;
+			font-family: 'Poppins', sans-serif !important;
+			margin-right: 20px !important;
+		}
+	</style>
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper" class="clearfix">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="border-bottom-0">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo" class="me-lg-5">
+							<a href="index.html" class="standard-logo"><img src="./img/logo-sena.svg"
+									alt="Canvas Logo"></a>
+							<a href="index.html" class="retina-logo"><img src="./img/logo-sena.svg"
+									alt="Canvas Logo"></a>
+						</div><!-- #logo end -->
+
+
+
+						<div id="primary-menu-trigger" class="ms-3">
+							<svg class="svg-trigger" viewBox="0 0 100 100">
+								<path
+									d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20">
+								</path>
+								<path d="m 30,50 h 40"></path>
+								<path
+									d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20">
+								</path>
+							</svg>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu me-lg-auto">
+
+							<ul class="menu-container">
+								<li class="menu-item current"><a class="menu-link" href="./introduccion.html">
+										<div>Introducción</div>
+									</a></li>
+								<li class="menu-item"><a class="menu-link" href="./conceptos.html">
+										<div>Conceptos IA</div>
+									</a></li>
+								<li class="menu-item"><a class="menu-link" href="./tecnicos.html">
+										<div>Definición de la Problematica</div>
+									</a></li>
+								<li class="menu-item"><a class="menu-link" href="./evaluacion.html">
+										<div>Actividad Evaluativa</div>
+									</a></li>
+								<li class="menu-item"><a class="menu-link" target="_blank" href="./downloads/guia.pdf">
+										<div>Guia de aprendizaje</div>
+									</a></li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+						<form class="top-search-form" action="search.html" method="get">
+							<input type="text" name="q" class="form-control" value=""
+								placeholder="Type &amp; Hit Enter.." autocomplete="off">
+						</form>
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Hero
+		============================================= -->
+		<section id="slider" class="slider-element bgcolor-2">
+
+			<img src="demos/nutrition/images/hero-bg.svg" class="position-absolute pos-x-end d-none d-lg-block" alt="">
+
+			<div class="container py-lg-0">
+
+				<h2 style="font-size: 40px;"><span>PROBLEMATICA:</span> Basado en los contenidos que se explican en
+					nuestro Objeto virtual de aprendizaje, vamos a
+					desarrollar un diccionario de traducción de Palabras de español a ingles usando los pasos y la
+					aplicación que te entregamos
+					a continuación
+					como proyecto de apoyo: </h2>
+				<div>
+					<h1>Actividad Evaluativa y Colaborativa</h1>
+					<p class="fw-normal">La integración de Javascript con la API de OpenAI es una herramienta poderosa
+						para desarrollar aplicaciones innovadoras dotando de nuevas interacciones y facilitando la
+						interacción con los usuarios y mejorando la comunicación. Para
+						trabajar con esta API a continuación veremos los 4 puntos necesarios relacionados con la
+						actividad. Ahora que vamos a empezar a trabajar en el proyecto, quiero explicarte cómo vamos a
+						desarrollarlo paso a paso.</p>
+
+					<div class="row" style="gap: 10px;">
+						<div class="col-md-6 bloque bloqueMod">
+							<div class="cabecera-bloque nuevo-bloque">
+								<img src="img/07.jpeg" alt="Generación de Texto" width="100">
+							</div>
+							<h2>Presentación del problema</h2>
+							<p>Vamos a comenzar con la Contextualización y Diagnóstico Inicial. En esta etapa, tu
+								profesor te presentará un problema real que debes resolver. También repasaremos las
+								temáticas necesarias para entender el problema y evaluaremos tus conocimientos previos.
+								De esta manera, podrás entender mejor el proyecto y sus objetivos.</p>
+						</div>
+
+
+
+						<div class="col-md-6 bloque bloqueMod">
+							<div class="cabecera-bloque nuevo-bloque">
+								<img src="img/08.jpeg" alt="Traducción de Texto" width="100">
+							</div>
+							<h2>Gestión por Grupos</h2>
+							<p>Una vez que tengamos claro el problema, vamos a dividirnos en grupos de tres personas.
+								Cada grupo tendrá un Vigia del Tiempo (Lider), un Implementador de JS y un Entrenador de
+								IA. Juntos, exploraremos el proyecto base, analizaremos la problemática y funciones
+								principales de la aplicación, e iniciaremos con la interacción del entrenamiento de la
+								API de OpenAI y con el DOM.
+							</p>
+						</div>
+
+						<div class="col-md-6 bloque bloqueMod">
+							<div class="cabecera-bloque nuevo-bloque">
+								<img src="img/12.jpeg" alt="Traducción de Texto" width="100">
+							</div>
+							<h2>Entrenamiento y solución</h2>
+							<p>Después de explorar el proyecto, llegará el momento de desarrollar y resolver el
+								problema. Para hacer esto, descargarás la plantilla del código, pensarás en una solución
+								nueva para agregar a la aplicación, resolverás problemas y desarrollarás la aplicación.
+								Finalmente, probarás y depurarás manualmente la aplicación para asegurarte de que
+								funcione correctamente y por ultimo haras las modificaciones que quieras tanto de estilo
+								como de funcionalidad permitiendo demostrar tu creatividad .
+							</p>
+						</div>
+
+						<div class="col-md-6 bloque bloqueMod">
+							<div class="cabecera-bloque nuevo-bloque">
+								<img src="img/13.jpeg" alt="Clasificación de Texto" width="100">
+							</div>
+							<h2>Entrega final del producto</h2>
+							<p>Por último, cada equipo presentará sus resultados. En esta etapa, reflexionarás sobre tu
+								trabajo, recibirás retroalimentación constructiva de tu profesor, y
+								te autoevaluarás cómo funcionó el trabajo en equipo y la asignación de roles. También
+								tendrás
+								la oportunidad de explicar cómo funciona el código que creaste. ¡Estoy emocionado de ver
+								lo que lograrás!</p>
+						</div>
+					</div>
+					<p class="fw-normal"> En resumen, el desarrollo del proyecto consiste en cuatro etapas clave:
+						Contextualización y Diagnóstico Inicial, Desarrollo Grupal y Exploración, Desarrollo y
+						Resolución del Problema, y Presentación y Evaluación. Es importante que sigas estos pasos para
+						asegurarte de que completes el proyecto de manera efectiva.</p>
+
+					<h3>Nota: </h3>
+					<p class="fw-normal">Es fundamental que participes activamente en cada etapa del proyecto. Si no
+						completas el trabajo
+						según las indicaciones, no podrás alcanzar los objetivos del proyecto y no desarrollarás las
+						habilidades necesarias para resolver problemas reales.</p>
+
+					<div class="container mt-5">
+						<h2 class="text-center">Plan de Mejoramiento</h2>
+						<p>Si no cumples con los requisitos del proyecto, se creará un Plan de Mejoramiento
+							personalizado para ti.</p>
+						<div class="alert alert-warning" role="alert">
+							El Plan de Mejoramiento es una herramienta personalizada para apoyarte en el desarrollo de
+							habilidades y conocimientos específicos. Su objetivo es ayudarte a superar dificultades y
+							alcanzar objetivos establecidos. El plan consta de cuatro etapas: evaluación inicial,
+							desarrollo de estrategias, implementación y seguimiento, y evaluación final.
+							<br>
+							Este plan se activará si no cumples con los requisitos del proyecto el día
+							<strong>23/09/2024</strong> y estará orientado a:
+						</div>
+						<ul class="list-group menu-container">
+							<li class="list-group-item">
+								<i class="fas fa-search"></i> Identificar áreas de debilidad
+							</li>
+							<li class="list-group-item">
+								<i class="fas fa-bullseye"></i> Establecer objetivos específicos para mejorar
+							</li>
+							<li class="list-group-item">
+								<i class="fas fa-clipboard-list"></i> Desarrollar un plan de acción para alcanzar esos
+								objetivos
+							</li>
+							<li class="list-group-item">
+								<i class="fas fa-comments"></i> Recibir retroalimentación y apoyo continuo
+							</li>
+						</ul>
+					</div>
+					<br><br><br>
+					<hr>
+
+					<div class="fixed-center colum" id="slider">
+						<div class="fixed-center row2">
+							<a href="./ejercicioIA/index.html" class="btn btn-success btn-lg" style="width: 400px;">
+								Ingresa al demo de la actividad</a>
+							<a href="./downloads/ejercicioIA.zip" class="btn btn-primary btn-lg" style="width: 400px;">
+								Descargue el zip con el codigo</a>
+						</div>
+						<div class="row ">
+							<div class="col-md-6 center">
+								<img src="img/actividad.JPG" style="margin:0 auto; width: 70%;" alt="">
+							</div>
+							<div class="col-md-6 center colum">
+								<h2>¿Como realizaremos la actividad?</h2>
+								<p>En este video, explicaremos el proceso de desarrollo de un proyecto de traducción
+									utilizando JavaScript y OpenAI. Cubriremos los 4 momentos clave: contextualización,
+									desarrollo grupal, resolución del problema y presentación. También introduciremos el
+									Plan de Mejoramiento para asegurar el éxito en el proyecto. ¡Únete para aprender y
+									mejorar tus habilidades!
+									</h3>
+									<br><br>
+									<iframe width="100%" height="365"
+										src="https://www.youtube.com/embed/W4ZXziA-S3c?si=HRu-Hr3C6Iy4BNPK"
+										title="YouTube video player" frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</section>
+
+
+
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="bg-white border-0">
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap">
+
+					<div class="row justify-content-between">
+						<div class="col-lg-3 mb-5 mb-lg-0">
+							<div class="widget clearfix">
+
+								<div class="fw-semibold font-primary color ls3 h2 text-uppercase mb-4">Canvas<span
+										class="color-2">.</span></div>
+								<p class="mb-4 op-07">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+									sint veritatis, necessitatibus voluptatem.</p>
+							</div>
+						</div>
+						<div class="col-lg-7 d-flex justify-content-end">
+
+							<div class="row w-100">
+								<div class="col-lg-4 col-6">
+									<ul class="widget_links widget-li-noicon">
+										<li class="mb-2 fw-medium"><a href="#">Home</a></li>
+										<li class="mb-2 fw-medium"><a href="#">About</a></li>
+										<li class="mb-2 fw-medium"><a href="#">FAQs</a></li>
+										<li class="mb-2 fw-medium"><a href="#">Support</a></li>
+									</ul>
+								</div>
+
+								<div class="col-lg-4 col-6">
+									<ul class="widget_links widget-li-noicon">
+										<li class="mb-2 fw-medium"><a href="#">Shop</a></li>
+										<li class="mb-2 fw-medium"><a href="#">Portfolio</a></li>
+										<li class="mb-2 fw-medium"><a href="#">Blog</a></li>
+									</ul>
+								</div>
+
+								<div class="col-lg-4 col-6">
+									<ul class="widget_links widget-li-noicon">
+										<li class="mb-2 fw-medium"><a href="#">Corporate</a></li>
+										<li class="mb-2 fw-medium"><a href="#">Agency</a></li>
+										<li class="mb-2 fw-medium"><a href="#">eCommerce</a></li>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights" class="bg-white">
+				<div class="container">
+
+					<div class="row justify-content-between">
+
+						<div class="col">
+							<span class="text-black-50">&copy; 2020 All Rights Reserved by Canvas Inc.</span>
+						</div>
+
+						<div class="col text-right">
+							<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div><!-- #copyrights end -->
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="icon-line-chevrons-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="js/jquery.js"></script>
+	<script src="js/plugins.min.js"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="js/functions.js"></script>
+
+</body>
+
+</html>

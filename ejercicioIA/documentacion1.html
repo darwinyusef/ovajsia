@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo: Modificación a HTML</title>
+    <link rel="stylesheet" href="./precode.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;">Ejemplo de Código JavaScript en HTML</h1>
+    <pre>
+<code class="language-javascript">
+<span class="comment">// Espera a que el DOM esté completamente cargado</span>
+document.<span class="function">addEventListener</span>('DOMContentLoaded', () => {
+    const <span class="variable">askBtn</span> = document.<span class="function">getElementById</span>('ask-btn');
+    const <span class="variable">questionInput</span> = document.<span class="function">getElementById</span>('question');
+    const <span class="variable">answerBox</span> = document.<span class="function">getElementById</span>('answer');
+
+    askBtn.<span class="function">addEventListener</span>('click', async () => {
+        const <span class="variable">question</span> = questionInput.<span class="function">value</span>.<span class="function">trim</span>();
+
+        <span class="keyword">if</span> (<span class="variable">question</span>) {
+            answerBox.<span class="function">textContent</span> = <span class="string">'Cargando respuesta...'</span>;
+            answerBox.<span class="function">classList</span>.<span class="function">add</span>(<span class="string">'loading'</span>);
+
+            <span class="keyword">try</span> {
+                const <span class="variable">response</span> = <span class="keyword">await</span> getAnswerFromAPI(<span class="variable">question</span>);
+                answerBox.<span class="function">textContent</span> = <span class="variable">response</span>;
+            } <span class="keyword">catch</span> (<span class="variable">error</span>) {
+                answerBox.<span class="function">textContent</span> = <span class="string">'Error al obtener respuesta.'</span>;
+            } <span class="keyword">finally</span> {
+                answerBox.<span class="function">classList</span>.<span class="function">remove</span>(<span class="string">'loading'</span>);
+            }
+        } <span class="keyword">else</span> {
+            answerBox.<span class="function">textContent</span> = <span class="string">'Por favor, escribe una pregunta válida.'</span>;
+        }
+    });
+
+    <span class="keyword">async</span> <span class="keyword">function</span> getAnswerFromAPI(<span class="variable">question</span>) {
+        <span class="variable">entrenamiento</span> = 
+        <span class="string">`Se un experto en ciencia y medio ambiente y resuelve preguntas solo con palabras de las tematicas del ciencia y medio ambiente, 
+        todo tema diferente al ciencia y medio ambiente le pediras amablemente realice otra pregunta. Resuelve en un mínimo de 100 palabras escribiendo una respuesta 
+        para la pregunta de la mejor manera posible, y agrega emojis. Esta es la pregunta: </span> <span class="variablein">${question}`</span>;
+
+        <span class="keyword">const</span> <span class="variable">apiKey</span> = <span class="string">"[YOUR_API_KEY]"</span>;
+        <span class="keyword">const</span> <span class="variable">url</span> = <span class="string">"https://api.openai.com/v1/chat/completions"</span>;
+
+        <span class="keyword">const</span> <span class="variable">headers</span> = {
+            <span class="string">"Content-Type"</span>: <span class="string">"application/json"</span>,
+            Authorization: <span class="string">`Bearer <spanc class="variablein">${apiKey}</spanc>`</span>,
+        };
+
+        <span class="keyword">const</span> <span class="variable">data</span> = {
+            model: <span class="string">"gpt-3.5-turbo"</span>,
+            messages: [{ role: <span class="string">"user"</span>, content: <span class="variable">entrenamiento</span> }],
+            temperature: 0.7,
+        };
+
+        <span class="keyword">const</span> <span class="variable">response</span> = <span class="keyword">await</span> fetch(<span class="variable">url</span>, {
+            method: <span class="string">"POST"</span>,
+            headers: <span class="variable">headers</span>,
+            body: JSON.<span class="function">stringify</span>(<span class="variable">data</span>),
+        });
+
+        <span class="keyword">const</span> <span class="variable">result</span> = <span class="keyword">await</span> <span class="variable">response</span>.<span class="function">json</span>();
+        <span class="keyword">return</span> <span class="variable">result</span>.choices[0].message.content;
+    }
+});
+</code>
+</pre>
+
+</body>
+
+</html>
